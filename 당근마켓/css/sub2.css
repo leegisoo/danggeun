@@ -1,0 +1,1003 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* 헤더영역 */
+header {
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+  background-color: #fff;
+}
+header nav {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+header nav .sidebar {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+header nav .sidebar .logo {
+  width: 100%;
+  height: 100%;
+  background-image: url(/img/Logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+header nav .sidebar .sidemenu {
+  position: absolute;
+  right: 13vw;
+}
+header nav .sidebar .sidemenu i {
+  font-size: 4vw;
+  color: #333;
+  display: none;
+}
+header nav .navigation {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav .navigation .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+header nav .navigation .menu li {
+  width: 15%;
+  margin-right: 2vw;
+}
+header nav .navigation .menu li a {
+  font: 20px/1 "Black Han Sans";
+  color: #bbb;
+  opacity: 1;
+}
+header nav .navigation .menu li a:hover {
+  color: #333;
+  opacity: 1;
+}
+header nav .navigation .sns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2vw;
+}
+header nav .navigation .sns li {
+  margin-right: 20px;
+}
+header nav .navigation .sns .facebook a i {
+  color: #3b5998;
+  font-size: 20px;
+}
+header nav .navigation .sns .insta a i {
+  font-size: 20px;
+}
+header nav .navigation .sns .blog a i {
+  color: #2DB400;
+  font-size: 20px;
+}
+
+/* 헤더영역 end*/
+/* 푸터영역 */
+footer {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+}
+footer .footerlogo {
+  width: 300px;
+  height: 50%;
+  margin-left: 5px;
+  background-image: url(/img/FooterLogo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer .info {
+  color: #eee;
+  font: 12px/1 "arial";
+  margin-right: 100px;
+}
+footer .info p {
+  margin: 10px 0;
+}
+
+/* 푸터영역 end*/
+@media screen and (max-width: 899px) {
+  header {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+  }
+  header nav {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+  }
+  header nav .sidebar {
+    width: 30vw;
+  }
+  header nav .sidebar .logo {
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/Logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 130%;
+  }
+  header nav .sidebar .sidemenu {
+    position: absolute;
+    right: 5vw;
+  }
+  header nav .sidebar .sidemenu i {
+    font-size: 30PX;
+    color: #f6a162;
+    display: block;
+  }
+  header nav .navigation {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    padding: 10vw 0;
+    opacity: 0;
+  }
+  header nav .navigation.on {
+    opacity: 1;
+  }
+  header nav .navigation .menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw;
+  }
+  header nav .navigation .menu li {
+    margin-right: 0;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav .navigation .menu li a {
+    font: 30px/1 "Black Han Sans";
+    color: #333;
+    opacity: 1;
+  }
+  header nav .navigation .sns {
+    display: flex;
+    height: 10%;
+    justify-content: space-around;
+  }
+  header nav .navigation .sns li {
+    margin-right: 20px;
+  }
+  header nav .navigation .sns .facebook a i {
+    color: #3b5998;
+    font-size: 30px;
+  }
+  header nav .navigation .sns .insta a i {
+    font-size: 30px;
+  }
+  header nav .navigation .sns .blog a i {
+    color: #2DB400;
+    font-size: 30px;
+    margin-right: -20px;
+  }
+
+  footer {
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footerlogo {
+    width: 200px;
+    height: 100px;
+    margin-left: 5px;
+    background-image: url(/img/FooterLogo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  footer .info {
+    width: 100%;
+    color: #eee;
+    font: 12px/1 "arial";
+    margin-right: 0pxPX;
+    padding: 2vw;
+  }
+  footer .info p {
+    margin: 10px 0;
+  }
+}
+.topdongnae {
+  margin-top: 10vh;
+  width: 100%;
+  height: 40vw;
+  background-image: url(http://www.apparelnews.co.kr/upfiles/manage/202111/a58d23772ae53d2c54cf15ba5210ad41.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.dongnae {
+  padding: 5vh;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.dongnae .bottom {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.dongnae .bottom .left {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.dongnae .bottom .left .topimage {
+  width: 35vw;
+  height: 40vw;
+  background: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-2-f286322ab98acedf914a05bf77e84c67dcb897c8ccb543e66f6afea9d366d06d.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 28%;
+  transform: scale(0.8);
+}
+.dongnae .bottom .left .topimage.on {
+  animation: left linear 1s forwards;
+}
+.dongnae .bottom .left .fakebox1 {
+  width: 50%;
+  height: 40vw;
+}
+.dongnae .bottom .left .lefttext {
+  width: 50%;
+  opacity: 0;
+}
+.dongnae .bottom .left .lefttext.on {
+  animation: text linear 1s forwards 1s;
+}
+.dongnae .bottom .left .lefttext h1 {
+  font: 3vw/1.5 "Black Han Sans";
+  color: #333;
+}
+.dongnae .bottom .left .lefttext .leftp {
+  margin-top: 10px;
+  font: 1vw/1 "nanum gothic";
+}
+.dongnae .bottom .left .lefttext .simage {
+  margin-top: 5vw;
+  display: flex;
+  justify-content: center;
+}
+.dongnae .bottom .left .lefttext .simage li {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.dongnae .bottom .left .lefttext .simage li .leftimage1 {
+  width: 50%;
+  height: 5vw;
+  background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/main/icon-story-1-9226479b836cdc960291ffda91ace46c90a632f6cc868aa8983b3624e662a924.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.dongnae .bottom .left .lefttext .simage li .leftimage2 {
+  width: 50%;
+  height: 5vw;
+  background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/main/icon-story-2-208bb88cad31e335b40bc8ac5b7684dcf8a36d77ac50770a497a9c967a3bfc4f.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.dongnae .bottom .left .lefttext .simage li .leftimage3 {
+  width: 50%;
+  height: 5vw;
+  background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/main/icon-story-3-0a14d64c6101a7271655747d8401b9f71506578f8a4c0640608074e977bbc7c0.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.dongnae .bottom .left .lefttext .simage li h1 {
+  margin-top: 1vw;
+  font: bold 1vw/1 "Nanum Gothic";
+}
+.dongnae .bottom .left .lefttext .simage li p {
+  font: 0.9vw/1.5 "arial";
+  padding: 1vw;
+}
+.dongnae .bottom .right {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.dongnae .bottom .right .righttext {
+  width: 50%;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dongnae .bottom .right .righttext.on {
+  animation: text linear 1s forwards 1s;
+}
+.dongnae .bottom .right .righttext h1 {
+  font: 3vw/1.5 "Black Han Sans";
+  color: #333;
+}
+.dongnae .bottom .right .righttext p {
+  margin-top: 10px;
+  font: 1vw/1.5 "nanum gothic";
+}
+.dongnae .bottom .right .righttext a {
+  margin-top: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 3vw;
+  background-color: #f6a162;
+  color: #fff;
+  border-radius: 10px;
+  font: 1vw/1 "black han sans";
+}
+.dongnae .bottom .right .fakebox2 {
+  width: 50%;
+  height: 40vw;
+}
+.dongnae .bottom .right .bottomimage {
+  width: 35vw;
+  height: 40vw;
+  background: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-3-0c8b631ac2294ac5a3b3e7a3a5580c3e68a3303ad2aded1e84aa57a2e1442786.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 28%;
+  transform: scale(0.8);
+}
+.dongnae .bottom .right .bottomimage.on {
+  animation: right linear 1s forwards;
+}
+
+.endimage {
+  width: 100%;
+  padding-top: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.endimage .endtext {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.endimage .endtext .maintext {
+  width: 50%;
+  height: 10vw;
+  background-image: url(/img/endtext.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+}
+.endimage .endtext .maintext.on {
+  animation: endtext linear 0.5s forwards;
+}
+.endimage .endtext .endendtext {
+  padding: 1vw;
+  font: 1.2vw/1.5 "Nanum Gothic";
+  opacity: 0;
+}
+.endimage .endtext .endendtext.on {
+  animation: endtext linear 0.5s forwards 1s;
+}
+.endimage .endmainimage {
+  width: 100%;
+  height: 30vw;
+  background-image: url(/img/endimage.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+  .topdongnae {
+    margin-top: 10vh;
+    width: 100%;
+    height: 400px;
+    background-image: url(http://www.apparelnews.co.kr/upfiles/manage/202111/a58d23772ae53d2c54cf15ba5210ad41.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .dongnae {
+    padding: 0 5vh;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .dongnae .bottom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .dongnae .bottom .left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+  .dongnae .bottom .left .topimage {
+    width: 100%;
+    height: 800px;
+    background: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-2-f286322ab98acedf914a05bf77e84c67dcb897c8ccb543e66f6afea9d366d06d.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    transform: scale(1);
+  }
+  .dongnae .bottom .left .fakebox1 {
+    width: 100%;
+    height: 800px;
+  }
+  .dongnae .bottom .left .lefttext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    opacity: 1;
+  }
+  .dongnae .bottom .left .lefttext h1 {
+    font: 40px/1.5 "black han sans";
+    color: #333;
+  }
+  .dongnae .bottom .left .lefttext .leftp {
+    width: 100%;
+    margin-top: 2vw;
+    font: 20px/1 "nanum gotihc";
+  }
+  .dongnae .bottom .left .lefttext .simage {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+  .dongnae .bottom .left .lefttext .simage li {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dongnae .bottom .left .lefttext .simage li .leftimage1 {
+    width: 75px;
+    height: 75px;
+    background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/main/icon-story-1-9226479b836cdc960291ffda91ace46c90a632f6cc868aa8983b3624e662a924.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .dongnae .bottom .left .lefttext .simage li .leftimage2 {
+    width: 75px;
+    height: 75px;
+    background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/main/icon-story-2-208bb88cad31e335b40bc8ac5b7684dcf8a36d77ac50770a497a9c967a3bfc4f.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .dongnae .bottom .left .lefttext .simage li .leftimage3 {
+    width: 75px;
+    height: 75px;
+    background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/main/icon-story-3-0a14d64c6101a7271655747d8401b9f71506578f8a4c0640608074e977bbc7c0.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .dongnae .bottom .left .lefttext .simage li h1 {
+    margin-top: 30px;
+    font: bold 20px/1 "Nanum Gothic";
+  }
+  .dongnae .bottom .left .lefttext .simage li p {
+    width: 70%;
+    font: 13px/1.5 "nanum gothic";
+    padding: 1vw;
+  }
+  .dongnae .bottom .right {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+  .dongnae .bottom .right .righttext {
+    width: 100%;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dongnae .bottom .right .righttext h1 {
+    margin-top: 30px;
+    font: 40px/1.5 "black han sans";
+    color: #333;
+  }
+  .dongnae .bottom .right .righttext p {
+    font: 20px/1.5 "nanum gothic";
+    padding: 2vw;
+  }
+  .dongnae .bottom .right .righttext a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 45px;
+    background-color: #f6a162;
+    color: #fff;
+    border-radius: 10px;
+    line-height: 45px;
+    font: 20px/1 "black han sans";
+    margin-top: 30px;
+  }
+  .dongnae .bottom .right .righttext a:hover {
+    background-color: #fb8428;
+  }
+  .dongnae .bottom .right .fakebox2 {
+    width: 100%;
+    height: 800px;
+  }
+  .dongnae .bottom .right .bottomimage {
+    width: 100%;
+    height: 800px;
+    background: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-3-0c8b631ac2294ac5a3b3e7a3a5580c3e68a3303ad2aded1e84aa57a2e1442786.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    right: 0;
+    transform: scale(1);
+  }
+
+  .endimage {
+    width: 100%;
+    padding-top: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .endimage .endtext {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .endimage .endtext .maintext {
+    width: 50%;
+    height: 15vw;
+    background-image: url(/img/endtext.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  .endimage .endtext .endendtext {
+    padding: 1vw;
+    font: 20px/1.5 "Nanum Gothic";
+    opacity: 1;
+  }
+  .endimage .endmainimage {
+    width: 100%;
+    height: 40vw;
+    background-image: url(/img/endimage.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  .topdongnae {
+    margin-top: 10vh;
+    padding: 0 0vw;
+    width: 100%;
+    height: 300px;
+    background-image: url(http://www.apparelnews.co.kr/upfiles/manage/202111/a58d23772ae53d2c54cf15ba5210ad41.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .dongnae {
+    padding: 0vw;
+    width: 100%;
+    height: 100%;
+  }
+  .dongnae .bottom {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .dongnae .bottom .left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+  .dongnae .bottom .left .topimage {
+    width: 100%;
+    height: 500px;
+    background: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-2-f286322ab98acedf914a05bf77e84c67dcb897c8ccb543e66f6afea9d366d06d.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    transform: scale(1);
+  }
+  .dongnae .bottom .left .fakebox1 {
+    width: 100%;
+    height: 500px;
+  }
+  .dongnae .bottom .left .lefttext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    opacity: 1;
+  }
+  .dongnae .bottom .left .lefttext h1 {
+    width: 100%;
+    margin-top: 0vw;
+    font: 30px/1.5 "Black Han Sans";
+    display: flex;
+    flex-direction: column;
+  }
+  .dongnae .bottom .left .lefttext .leftp {
+    width: 100%;
+    font-size: 13px;
+    margin-top: 0;
+  }
+  .dongnae .bottom .left .lefttext .simage {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .dongnae .bottom .left .lefttext .simage li {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+  }
+  .dongnae .bottom .left .lefttext .simage li .leftimage1 {
+    width: 15vw;
+    height: 15vw;
+    background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/main/icon-story-1-9226479b836cdc960291ffda91ace46c90a632f6cc868aa8983b3624e662a924.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .dongnae .bottom .left .lefttext .simage li .leftimage2 {
+    width: 15vw;
+    height: 15vw;
+    background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/main/icon-story-2-208bb88cad31e335b40bc8ac5b7684dcf8a36d77ac50770a497a9c967a3bfc4f.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .dongnae .bottom .left .lefttext .simage li .leftimage3 {
+    width: 15vw;
+    height: 15vw;
+    background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/main/icon-story-3-0a14d64c6101a7271655747d8401b9f71506578f8a4c0640608074e977bbc7c0.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .dongnae .bottom .left .lefttext .simage li h1 {
+    margin-top: 10px;
+    font: bold 15px/1 "nanum gothic";
+  }
+  .dongnae .bottom .left .lefttext .simage li p {
+    font: 8px/1 "nanum gothic";
+    padding: 1vw;
+    display: none;
+  }
+  .dongnae .bottom .right {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: right;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+  }
+  .dongnae .bottom .right .righttext {
+    width: 100%;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .dongnae .bottom .right .righttext h1 {
+    width: 100%;
+    margin-top: 0vw;
+    font: 28px/1 "Black Han Sans";
+  }
+  .dongnae .bottom .right .righttext p {
+    width: 100%;
+    font-size: 13px;
+    margin-top: 5px;
+    padding: 0;
+  }
+  .dongnae .bottom .right .righttext a {
+    margin-top: 30px;
+    width: 300px;
+    height: 40px;
+    background-color: #f6a162;
+    color: #fff;
+    border-radius: 10px;
+    font: 20px/1 "black han sans";
+  }
+  .dongnae .bottom .right .righttext a:hover {
+    background-color: #fb8428;
+  }
+  .dongnae .bottom .right .fakebox2 {
+    width: 100%;
+    height: 500px;
+  }
+  .dongnae .bottom .right .bottomimage {
+    width: 100%;
+    height: 500px;
+    background: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-3-0c8b631ac2294ac5a3b3e7a3a5580c3e68a3303ad2aded1e84aa57a2e1442786.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    right: 0;
+    transform: scale(1);
+  }
+
+  .endimage {
+    margin-top: 50px;
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .endimage .endtext {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .endimage .endtext .maintext {
+    width: 100%;
+    height: 100px;
+    background-image: url(/img/endtext.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 1;
+  }
+  .endimage .endtext .endendtext {
+    margin-top: 4vw;
+    padding: 1vw;
+    font: 13px/1.3 "Nanum Gothic";
+    opacity: 1;
+  }
+  .endimage .endmainimage {
+    width: 100%;
+    height: 200px;
+    background-image: url(/img/endimage.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+@keyframes ani {
+  0% {
+    transform: scale(0.8) translateY(200px);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes left {
+  0% {
+    top: 0;
+    left: 28%;
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  30% {
+    top: 0;
+    left: 28%;
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    top: 0;
+    left: 28%;
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  70% {
+    top: 0;
+    left: 28%;
+    transform: scale(1);
+    opacity: 1;
+  }
+  90% {
+    top: 0;
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes right {
+  0% {
+    top: 0;
+    right: 28%;
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  30% {
+    top: 0;
+    right: 28%;
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    top: 0;
+    right: 28%;
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  70% {
+    top: 0;
+    right: 28%;
+    transform: scale(1);
+    opacity: 1;
+  }
+  90% {
+    top: 0;
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -top: 0;
+    right: 0;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes endtext {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=sub2.css.map */

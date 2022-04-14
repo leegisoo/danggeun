@@ -1,0 +1,1172 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* 헤더영역 */
+header {
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+  background-color: #fff;
+}
+header nav {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+header nav .sidebar {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+header nav .sidebar .logo {
+  width: 100%;
+  height: 100%;
+  background-image: url(/img/Logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+header nav .sidebar .sidemenu {
+  position: absolute;
+  right: 13vw;
+}
+header nav .sidebar .sidemenu i {
+  font-size: 4vw;
+  color: #333;
+  display: none;
+}
+header nav .navigation {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav .navigation .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+header nav .navigation .menu li {
+  width: 15%;
+  margin-right: 2vw;
+}
+header nav .navigation .menu li a {
+  font: 20px/1 "Black Han Sans";
+  color: #bbb;
+  opacity: 1;
+}
+header nav .navigation .menu li a:hover {
+  color: #333;
+  opacity: 1;
+}
+header nav .navigation .sns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2vw;
+}
+header nav .navigation .sns li {
+  margin-right: 20px;
+}
+header nav .navigation .sns .facebook a i {
+  color: #3b5998;
+  font-size: 20px;
+}
+header nav .navigation .sns .insta a i {
+  font-size: 20px;
+}
+header nav .navigation .sns .blog a i {
+  color: #2DB400;
+  font-size: 20px;
+}
+
+/* 헤더영역 end*/
+/* 푸터영역 */
+footer {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+}
+footer .footerlogo {
+  width: 300px;
+  height: 50%;
+  margin-left: 5px;
+  background-image: url(/img/FooterLogo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer .info {
+  color: #eee;
+  font: 12px/1 "arial";
+  margin-right: 100px;
+}
+footer .info p {
+  margin: 10px 0;
+}
+
+/* 푸터영역 end*/
+@media screen and (max-width: 899px) {
+  header {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+  }
+  header nav {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+  }
+  header nav .sidebar {
+    width: 30vw;
+  }
+  header nav .sidebar .logo {
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/Logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 130%;
+  }
+  header nav .sidebar .sidemenu {
+    position: absolute;
+    right: 5vw;
+  }
+  header nav .sidebar .sidemenu i {
+    font-size: 30PX;
+    color: #f6a162;
+    display: block;
+  }
+  header nav .navigation {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    padding: 10vw 0;
+    opacity: 0;
+  }
+  header nav .navigation.on {
+    opacity: 1;
+  }
+  header nav .navigation .menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw;
+  }
+  header nav .navigation .menu li {
+    margin-right: 0;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav .navigation .menu li a {
+    font: 30px/1 "Black Han Sans";
+    color: #333;
+    opacity: 1;
+  }
+  header nav .navigation .sns {
+    display: flex;
+    height: 10%;
+    justify-content: space-around;
+  }
+  header nav .navigation .sns li {
+    margin-right: 20px;
+  }
+  header nav .navigation .sns .facebook a i {
+    color: #3b5998;
+    font-size: 30px;
+  }
+  header nav .navigation .sns .insta a i {
+    font-size: 30px;
+  }
+  header nav .navigation .sns .blog a i {
+    color: #2DB400;
+    font-size: 30px;
+    margin-right: -20px;
+  }
+
+  footer {
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footerlogo {
+    width: 200px;
+    height: 100px;
+    margin-left: 5px;
+    background-image: url(/img/FooterLogo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  footer .info {
+    width: 100%;
+    color: #eee;
+    font: 12px/1 "arial";
+    margin-right: 0pxPX;
+    padding: 2vw;
+  }
+  footer .info p {
+    margin: 10px 0;
+  }
+}
+body .main {
+  width: 100%;
+  height: 70vh;
+  margin-top: 10vh;
+  background-color: #f6a162;
+  position: relative;
+}
+body .main .hoverimage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  opacity: 1;
+  transition: 1s;
+  z-index: 2;
+}
+body .main .hoverimage .hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+}
+body .main .hoverimage .hover p {
+  font: 150px/1 "black han sans";
+  color: #fff;
+  letter-spacing: 30px;
+  margin: 5vh;
+}
+body .main .hoverimage .hover .dang {
+  width: 250px;
+  position: relative;
+  bottom: -20px;
+  transition: 1s;
+  animation: dang linear 1s infinite;
+}
+body .main .hoverimage.on {
+  opacity: 0;
+}
+@keyframes dang {
+  0% {
+    bottom: -20px;
+  }
+  50% {
+    bottom: 0;
+  }
+  100% {
+    bottom: -20px;
+  }
+}
+body .main .mainimage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  opacity: 0;
+  transition: 0.6s;
+  transition-delay: 1s;
+}
+body .main .mainimage.on {
+  opacity: 1;
+}
+body .main .mainimage .maintext {
+  width: 100%;
+  text-align: center;
+  margin-top: 8vh;
+  position: absolute;
+}
+body .main .mainimage .maintext h1 {
+  font: 40px/1.5 "black han sans";
+  color: #fff;
+}
+body .main .mainimage .maintext p {
+  font: 17px/1 "nanum gothic";
+  color: #fff;
+}
+body .main .mainimage .trustimage {
+  width: 100%;
+  height: 45vh;
+  position: absolute;
+  bottom: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-top-9311b8d953145ff88e5951f372dc9bb72837b476559f12f31bc4606a693c893c.png);
+}
+body .topinfo {
+  width: 100%;
+  padding: 5vh;
+}
+body .topinfo .trade {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .topinfo .trade .trade1 {
+  width: 100%;
+  padding: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .topinfo .trade .trade1 .image1 {
+  width: 340px;
+  height: 254px;
+  background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-4-40a7a99a51eec3025cc5a7a29b1a240564cd39bcc7c9f4d1c54ac4b36110ec2b.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 10vh;
+  transform: scale(1.1);
+}
+body .topinfo .trade .trade1 .image1text {
+  width: 45%;
+}
+body .topinfo .trade .trade1 .image1text h1 {
+  font: 25px/1 "black han sans";
+  margin-bottom: 5vh;
+}
+body .topinfo .trade .trade1 .image1text p {
+  width: 87%;
+  font: normal 1em/1.5 "arial";
+}
+body .topinfo .trade .trade2 {
+  width: 100%;
+  padding: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .topinfo .trade .trade2 .image2 {
+  width: 340px;
+  height: 254px;
+  background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-2-c6c12bebd3e9dfca05c66eefa0705981e3f4442256dcd9ec365e7704d549faf6.png);
+  background-position: center;
+  background-size: 340px 254px;
+  background-repeat: no-repeat;
+  transform: scale(1.1);
+}
+body .topinfo .trade .trade2 .image2text {
+  width: 45%;
+}
+body .topinfo .trade .trade2 .image2text h1 {
+  font: 25px/1 "black han sans";
+  margin-bottom: 5vh;
+}
+body .topinfo .trade .trade2 .image2text p {
+  width: 87%;
+  font: normal 1em/1.5 "arial";
+}
+body .topinfo .trade .trade3 {
+  width: 100%;
+  padding: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .topinfo .trade .trade3 .image3 {
+  width: 340px;
+  height: 254px;
+  background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-3-09bd31cba4a5bbf730fa26059aeaf08c24e425747343700d42cd7ffc28adf649.png);
+  background-position: center;
+  background-size: 340px 254px;
+  background-repeat: no-repeat;
+  margin-right: 10vh;
+  transform: scale(1.1);
+}
+body .topinfo .trade .trade3 .image3text {
+  width: 45%;
+}
+body .topinfo .trade .trade3 .image3text h1 {
+  font: 25px/1 "black han sans";
+  margin-bottom: 5vh;
+}
+body .topinfo .trade .trade3 .image3text p {
+  width: 87%;
+  font: normal 1em/1.5 "arial";
+}
+body .topinfo .trade .trade3 .image3text .corona {
+  color: #f6a162;
+}
+body .bottominfo {
+  width: 100%;
+  background-color: rgb(245, 245, 245);
+  padding: 0 10vh 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .bottominfo .helptext {
+  width: 80%;
+  font: 3vw/1.2 "black han sans";
+  padding-top: 2vw;
+  text-align: center;
+}
+body .bottominfo .help {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+}
+body .bottominfo .help .help1 {
+  padding: 4vw;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .bottominfo .help .help1 .help1image {
+  border-radius: 30px;
+  width: 30vw;
+  height: 20vw;
+  background: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-1-08564a68dc6a07f9f05a35b2308a288ace19158318c3412960a257b4ffa2d9f8.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body .bottominfo .help .help1 h1 {
+  font: 2vw/1 "black han sans";
+  margin: 5vh 0;
+}
+body .bottominfo .help .help1 p {
+  font: 1vw/1.5 "nanum gothic";
+}
+body .bottominfo .help .help2 {
+  padding: 4vw;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .bottominfo .help .help2 .help2image {
+  width: 30vw;
+  height: 20vw;
+  background: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-5-9b0bb1401ef34ea10b1dbbf34d4b8efa56609c5d69f8916a2a9eb942513f09a3.png);
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body .bottominfo .help .help2 h1 {
+  font: 2vw/1 "black han sans";
+  margin: 5vh 0;
+}
+body .bottominfo .help .help2 p {
+  font: 1vw/1.5 "nanum gothic";
+}
+body .bottominfo .help .help3 {
+  margin-top: -2vw;
+  padding: 4vw;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .bottominfo .help .help3 .help3image {
+  width: 30vw;
+  height: 20vw;
+  background: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-7-e6b37bc404aeddde1810544c4cf05db9141b49b4d65aea6887493d3d31df8a5d.png);
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body .bottominfo .help .help3 h1 {
+  font: 2vw/1 "black han sans";
+  margin: 5vh 0;
+}
+body .bottominfo .help .help3 p {
+  font: 1vw/1.5 "nanum gothic";
+}
+body .bottominfo .help .help4 {
+  margin-top: -2vw;
+  padding: 4vw;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .bottominfo .help .help4 .help4image {
+  width: 30vw;
+  height: 20vw;
+  background: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-8-7bb8b91a94c04b7103db580fa2fee6ecadbe0ea6284c6c917cb035bb1a0229ef.png);
+  background-size: 68%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body .bottominfo .help .help4 h1 {
+  font: 2vw/1 "black han sans";
+  margin: 5vh 0;
+}
+body .bottominfo .help .help4 p {
+  font: 1vw/1.5 "nanum gothic";
+}
+
+@media screen and (min-width: 601px) and (max-width: 899px) {
+  body .main {
+    width: 100%;
+    height: 60vw;
+    margin-top: 10vh;
+    background-color: #f6a162;
+    position: relative;
+  }
+  body .main .hoverimage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    transition: 1s;
+    z-index: 2;
+    display: none;
+  }
+  body .main .hoverimage .hover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+  }
+  body .main .hoverimage .hover p {
+    font: 80px/1 "Black Han Sans";
+    color: #fff;
+    letter-spacing: 30px;
+    margin: 5vh;
+  }
+  body .main .hoverimage .hover .dang {
+    width: 180px;
+    position: relative;
+    bottom: -20px;
+    transition: 1s;
+    animation: dang linear 1s infinite;
+  }
+  body .main .hoverimage.on {
+    opacity: 0;
+  }
+  @keyframes dang {
+    0% {
+      bottom: -20px;
+    }
+    50% {
+      bottom: 0;
+    }
+    100% {
+      bottom: -20px;
+    }
+  }
+  body .main .mainimage {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 1;
+  }
+  body .main .mainimage .maintext {
+    width: 100%;
+    text-align: center;
+    margin-top: 5vw;
+    position: absolute;
+  }
+  body .main .mainimage .maintext h1 {
+    font: 5vw/1 "do hyeon";
+    color: #fff;
+  }
+  body .main .mainimage .maintext p {
+    font: 2vw/1 "arial";
+    color: #fff;
+  }
+  body .main .mainimage .trustimage {
+    width: 100%;
+    height: 60vh;
+    position: absolute;
+    bottom: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-top-9311b8d953145ff88e5951f372dc9bb72837b476559f12f31bc4606a693c893c.png);
+  }
+  body .topinfo {
+    width: 100%;
+    padding: 5vh;
+  }
+  body .topinfo .trade {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body .topinfo .trade .trade1 {
+    width: 100%;
+    padding: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  body .topinfo .trade .trade1 .image1 {
+    width: 80%;
+    height: 40vw;
+    background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-4-40a7a99a51eec3025cc5a7a29b1a240564cd39bcc7c9f4d1c54ac4b36110ec2b.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0vh;
+    transform: scale(1);
+  }
+  body .topinfo .trade .trade1 .image1text {
+    width: 100%;
+    text-align: center;
+  }
+  body .topinfo .trade .trade1 .image1text h1 {
+    font-size: 4vw;
+    margin: 4vw;
+  }
+  body .topinfo .trade .trade1 .image1text p {
+    width: 87%;
+    font: normal 1em/1.5 "arial";
+    display: none;
+  }
+  body .topinfo .trade .trade2 {
+    width: 100%;
+    padding: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+  body .topinfo .trade .trade2 .image2 {
+    width: 80%;
+    height: 40vw;
+    background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-2-c6c12bebd3e9dfca05c66eefa0705981e3f4442256dcd9ec365e7704d549faf6.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0vh;
+    transform: scale(1);
+  }
+  body .topinfo .trade .trade2 .image2text {
+    width: 100%;
+    text-align: center;
+  }
+  body .topinfo .trade .trade2 .image2text h1 {
+    font-size: 4vw;
+    margin: 4vw;
+  }
+  body .topinfo .trade .trade2 .image2text p {
+    width: 87%;
+    font: normal 1em/1.5 "arial";
+    display: none;
+  }
+  body .topinfo .trade .trade3 {
+    width: 100%;
+    padding: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  body .topinfo .trade .trade3 .image3 {
+    width: 80%;
+    height: 40vw;
+    background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-3-09bd31cba4a5bbf730fa26059aeaf08c24e425747343700d42cd7ffc28adf649.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0vh;
+    transform: scale(1);
+  }
+  body .topinfo .trade .trade3 .image3text {
+    width: 100%;
+    text-align: center;
+  }
+  body .topinfo .trade .trade3 .image3text h1 {
+    font-size: 4vw;
+    margin: 4vw;
+  }
+  body .topinfo .trade .trade3 .image3text p {
+    width: 87%;
+    font: normal 1em/1.5 "arial";
+    display: none;
+  }
+  body .bottominfo {
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    padding: 0;
+  }
+  body .bottominfo .helptext {
+    width: 100%;
+    font: 4vw/1.2 "black han sans";
+    text-align: center;
+    padding-top: 2vw;
+    margin-bottom: 20px;
+  }
+  body .bottominfo .help {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body .bottominfo .help .help1 {
+    padding: 2vw;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .bottominfo .help .help1 .help1image {
+    border-radius: 30px;
+    width: 100%;
+    height: 300px;
+    background: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-1-08564a68dc6a07f9f05a35b2308a288ace19158318c3412960a257b4ffa2d9f8.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  body .bottominfo .help .help1 h1 {
+    font: 4vw/1 "black han sans";
+    margin: 5vh 0;
+  }
+  body .bottominfo .help .help1 p {
+    font: 15px/1.5 "nanum gothic";
+  }
+  body .bottominfo .help .help2 {
+    padding: 4vw;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .bottominfo .help .help2 .help2image {
+    border-radius: 30px;
+    width: 100%;
+    height: 320px;
+    background: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-5-9b0bb1401ef34ea10b1dbbf34d4b8efa56609c5d69f8916a2a9eb942513f09a3.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  body .bottominfo .help .help2 h1 {
+    font: 4vw/1 "black han sans";
+    margin: 4vw 0;
+  }
+  body .bottominfo .help .help2 p {
+    width: 100%;
+    font: 15px/1.5 "nanum gothic";
+  }
+  body .bottominfo .help .help3 {
+    padding: 4vw;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .bottominfo .help .help3 .help3image {
+    border-radius: 30px;
+    width: 100%;
+    height: 300px;
+    background: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-7-e6b37bc404aeddde1810544c4cf05db9141b49b4d65aea6887493d3d31df8a5d.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  body .bottominfo .help .help3 h1 {
+    font: 4vw/1 "black han sans";
+    margin: 4vw 0;
+  }
+  body .bottominfo .help .help3 p {
+    width: 100%;
+    font: 15px/1.5 "nanum gothic";
+  }
+  body .bottominfo .help .help4 {
+    padding: 4vw;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .bottominfo .help .help4 .help4image {
+    border-radius: 30px;
+    width: 100%;
+    height: 300px;
+    background: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-8-7bb8b91a94c04b7103db580fa2fee6ecadbe0ea6284c6c917cb035bb1a0229ef.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  body .bottominfo .help .help4 h1 {
+    font: 4vw/1 "black han sans";
+    margin: 4vw 0;
+  }
+  body .bottominfo .help .help4 p {
+    width: 100%;
+    font: 15px/1.5 "nanum gothic";
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  body .main {
+    width: 100%;
+    height: 60vw;
+    margin-top: 10vh;
+    background-color: #f6a162;
+    position: relative;
+  }
+  body .main .hoverimage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    transition: 1s;
+    z-index: 2;
+    display: none;
+  }
+  body .main .hoverimage .hover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+  }
+  body .main .hoverimage .hover p {
+    font: 80px/1 "Black Han Sans";
+    color: #fff;
+    letter-spacing: 30px;
+    margin: 5vh;
+  }
+  body .main .hoverimage .hover .dang {
+    width: 180px;
+    position: relative;
+    bottom: -20px;
+    transition: 1s;
+    animation: dang linear 1s infinite;
+  }
+  body .main .hoverimage.on {
+    opacity: 0;
+  }
+  @keyframes dang {
+    0% {
+      bottom: -20px;
+    }
+    50% {
+      bottom: 0;
+    }
+    100% {
+      bottom: -20px;
+    }
+  }
+  body .main .mainimage {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 1;
+  }
+  body .main .mainimage .maintext {
+    width: 100%;
+    text-align: center;
+    margin-top: 5vw;
+    position: absolute;
+  }
+  body .main .mainimage .maintext h1 {
+    font: 5vw/1 "do hyeon";
+    color: #fff;
+  }
+  body .main .mainimage .maintext p {
+    font: 1vw/1 "arial";
+    color: #fff;
+  }
+  body .main .mainimage .trustimage {
+    width: 100%;
+    height: 60vh;
+    position: absolute;
+    bottom: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-top-9311b8d953145ff88e5951f372dc9bb72837b476559f12f31bc4606a693c893c.png);
+  }
+  body .topinfo {
+    width: 100%;
+    padding: 5vh;
+  }
+  body .topinfo .trade {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body .topinfo .trade .trade1 {
+    width: 100%;
+    padding: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  body .topinfo .trade .trade1 .image1 {
+    width: 80%;
+    height: 40vw;
+    background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-4-40a7a99a51eec3025cc5a7a29b1a240564cd39bcc7c9f4d1c54ac4b36110ec2b.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0vh;
+    transform: scale(1);
+  }
+  body .topinfo .trade .trade1 .image1text {
+    width: 100%;
+    text-align: center;
+  }
+  body .topinfo .trade .trade1 .image1text h1 {
+    font-size: 4vw;
+    margin: 4vw;
+  }
+  body .topinfo .trade .trade1 .image1text p {
+    width: 87%;
+    font: normal 1em/1.5 "arial";
+    display: none;
+  }
+  body .topinfo .trade .trade2 {
+    width: 100%;
+    padding: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+  body .topinfo .trade .trade2 .image2 {
+    width: 80%;
+    height: 40vw;
+    background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-2-c6c12bebd3e9dfca05c66eefa0705981e3f4442256dcd9ec365e7704d549faf6.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0vh;
+    transform: scale(1);
+  }
+  body .topinfo .trade .trade2 .image2text {
+    width: 100%;
+    text-align: center;
+  }
+  body .topinfo .trade .trade2 .image2text h1 {
+    font-size: 4vw;
+    margin: 4vw;
+  }
+  body .topinfo .trade .trade2 .image2text p {
+    width: 87%;
+    font: normal 1em/1.5 "arial";
+    display: none;
+  }
+  body .topinfo .trade .trade3 {
+    width: 100%;
+    padding: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  body .topinfo .trade .trade3 .image3 {
+    width: 80%;
+    height: 40vw;
+    background-image: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-3-09bd31cba4a5bbf730fa26059aeaf08c24e425747343700d42cd7ffc28adf649.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0vh;
+    transform: scale(1);
+  }
+  body .topinfo .trade .trade3 .image3text {
+    width: 100%;
+    text-align: center;
+  }
+  body .topinfo .trade .trade3 .image3text h1 {
+    font-size: 4vw;
+    margin: 4vw;
+  }
+  body .topinfo .trade .trade3 .image3text p {
+    width: 87%;
+    font: normal 1em/1.5 "arial";
+    display: none;
+  }
+  body .bottominfo {
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    padding: 0;
+  }
+  body .bottominfo .helptext {
+    width: 100%;
+    font: 4.5vw/1.5 "black han sans";
+    padding-top: 2vw;
+    text-align: center;
+  }
+  body .bottominfo .help {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5vw;
+  }
+  body .bottominfo .help .help1 {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .bottominfo .help .help1 .help1image {
+    border-radius: 30px;
+    width: 70vw;
+    height: 50vw;
+    background: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-1-08564a68dc6a07f9f05a35b2308a288ace19158318c3412960a257b4ffa2d9f8.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  body .bottominfo .help .help1 h1 {
+    width: 100%;
+    font: 4vw/1 "black han sans";
+    margin: 2vh 0;
+    text-align: center;
+  }
+  body .bottominfo .help .help1 p {
+    display: none;
+  }
+  body .bottominfo .help .help2 {
+    padding: 4vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .bottominfo .help .help2 .help2image {
+    border-radius: 30px;
+    width: 100%;
+    height: 50vw;
+    background: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-5-9b0bb1401ef34ea10b1dbbf34d4b8efa56609c5d69f8916a2a9eb942513f09a3.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  body .bottominfo .help .help2 h1 {
+    width: 100%;
+    font: 4vw/1 "black han sans";
+    margin: 0;
+    text-align: center;
+  }
+  body .bottominfo .help .help2 p {
+    display: none;
+  }
+  body .bottominfo .help .help3 {
+    padding: 4vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .bottominfo .help .help3 .help3image {
+    border-radius: 30px;
+    width: 100%;
+    height: 50vw;
+    background: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-7-e6b37bc404aeddde1810544c4cf05db9141b49b4d65aea6887493d3d31df8a5d.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  body .bottominfo .help .help3 h1 {
+    width: 100%;
+    font: 4vw/1 "black han sans";
+    margin: 0;
+    text-align: center;
+  }
+  body .bottominfo .help .help3 p {
+    display: none;
+  }
+  body .bottominfo .help .help4 {
+    padding: 4vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  body .bottominfo .help .help4 .help4image {
+    border-radius: 30px;
+    width: 100%;
+    height: 50vw;
+    background: url(https://d1unjqcospf8gs.cloudfront.net/assets/home/trust/3x/img-trust-8-7bb8b91a94c04b7103db580fa2fee6ecadbe0ea6284c6c917cb035bb1a0229ef.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  body .bottominfo .help .help4 h1 {
+    width: 100%;
+    font: 4vw/1 "black han sans";
+    margin: 0;
+    text-align: center;
+  }
+  body .bottominfo .help .help4 p {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=sub1.css.map */

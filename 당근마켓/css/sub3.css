@@ -1,0 +1,878 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Roboto+Serif:ital@1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* 헤더영역 */
+header {
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+  background-color: #fff;
+}
+header nav {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+header nav .sidebar {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+header nav .sidebar .logo {
+  width: 100%;
+  height: 100%;
+  background-image: url(/img/Logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+header nav .sidebar .sidemenu {
+  position: absolute;
+  right: 13vw;
+}
+header nav .sidebar .sidemenu i {
+  font-size: 4vw;
+  color: #333;
+  display: none;
+}
+header nav .navigation {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav .navigation .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+header nav .navigation .menu li {
+  width: 15%;
+  margin-right: 2vw;
+}
+header nav .navigation .menu li a {
+  font: 20px/1 "Black Han Sans";
+  color: #bbb;
+  opacity: 1;
+}
+header nav .navigation .menu li a:hover {
+  color: #333;
+  opacity: 1;
+}
+header nav .navigation .sns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2vw;
+}
+header nav .navigation .sns li {
+  margin-right: 20px;
+}
+header nav .navigation .sns .facebook a i {
+  color: #3b5998;
+  font-size: 20px;
+}
+header nav .navigation .sns .insta a i {
+  font-size: 20px;
+}
+header nav .navigation .sns .blog a i {
+  color: #2DB400;
+  font-size: 20px;
+}
+
+/* 헤더영역 end*/
+/* 푸터영역 */
+footer {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+}
+footer .footerlogo {
+  width: 300px;
+  height: 50%;
+  margin-left: 5px;
+  background-image: url(/img/FooterLogo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer .info {
+  color: #eee;
+  font: 12px/1 "arial";
+  margin-right: 100px;
+}
+footer .info p {
+  margin: 10px 0;
+}
+
+/* 푸터영역 end*/
+@media screen and (max-width: 899px) {
+  header {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+  }
+  header nav {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+  }
+  header nav .sidebar {
+    width: 30vw;
+  }
+  header nav .sidebar .logo {
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/Logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 130%;
+  }
+  header nav .sidebar .sidemenu {
+    position: absolute;
+    right: 5vw;
+  }
+  header nav .sidebar .sidemenu i {
+    font-size: 30PX;
+    color: #f6a162;
+    display: block;
+  }
+  header nav .navigation {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    padding: 10vw 0;
+    opacity: 0;
+  }
+  header nav .navigation.on {
+    opacity: 1;
+  }
+  header nav .navigation .menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw;
+  }
+  header nav .navigation .menu li {
+    margin-right: 0;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav .navigation .menu li a {
+    font: 30px/1 "Black Han Sans";
+    color: #333;
+    opacity: 1;
+  }
+  header nav .navigation .sns {
+    display: flex;
+    height: 10%;
+    justify-content: space-around;
+  }
+  header nav .navigation .sns li {
+    margin-right: 20px;
+  }
+  header nav .navigation .sns .facebook a i {
+    color: #3b5998;
+    font-size: 30px;
+  }
+  header nav .navigation .sns .insta a i {
+    font-size: 30px;
+  }
+  header nav .navigation .sns .blog a i {
+    color: #2DB400;
+    font-size: 30px;
+    margin-right: -20px;
+  }
+
+  footer {
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footerlogo {
+    width: 200px;
+    height: 100px;
+    margin-left: 5px;
+    background-image: url(/img/FooterLogo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  footer .info {
+    width: 100%;
+    color: #eee;
+    font: 12px/1 "arial";
+    margin-right: 0pxPX;
+    padding: 2vw;
+  }
+  footer .info p {
+    margin: 10px 0;
+  }
+}
+section {
+  width: 100%;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+section .topcon {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+section .topcon .topcontext {
+  margin-top: 2vw;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .topcon .topcontext h1 {
+  width: 40%;
+  font: bold 35px/1.5 "nanum gothic";
+  color: #333;
+}
+section .topcon .topcontext p {
+  width: 50%;
+  font: 15px/1.8 "nanum gothic";
+}
+section .topcon .topconbg {
+  width: 100%;
+  height: 40vw;
+  margin-top: 2vw;
+  background: url(/img/60f3336b-9f37-4599-84db-4d587f8a429b_culture_02_16x9.avif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+section .midcon {
+  width: 80%;
+  margin-top: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+section .midcon .midcontext {
+  margin-top: 2vw;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .midcon .midcontext h1 {
+  width: 40%;
+  font: bold 35px/1.5 "nanum gothic";
+}
+section .midcon .midcontext p {
+  width: 50%;
+  font: 15px/1.8 "nanum gothic";
+}
+section .midcon .midpeople {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 2vw;
+  padding: 4vw;
+}
+section .midcon .midpeople .people {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+section .midcon .midpeople .people .peoplefront {
+  width: 40%;
+  height: 35vw;
+  transform: skew(2deg) translateX(10%);
+  border-radius: 10%;
+  overflow: hidden;
+  background-image: url(https://team.daangn.com/static/433b212afa8b311fdea2de61bb590596/a3955/58acfc5c-9d91-4c4d-86b9-60af8c94bc16_photo_11.avif);
+  background-position: top 0 left 20%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: -10px 15px 20px rgba(201, 200, 200, 0.802);
+}
+section .midcon .midpeople .people .peopletext {
+  width: 50%;
+  text-align: center;
+}
+section .midcon .midpeople .people .peopletext h1 {
+  font: bold 30px/1 "Roboto Serif";
+  margin-bottom: 3vw;
+}
+section .midcon .midpeople .people .peopletext p {
+  font: 20px/1.8 "nanum gothic";
+  padding: 1vw;
+}
+section .midcon .midpeople .people:nth-of-type(2) {
+  flex-direction: row-reverse;
+}
+section .midcon .midpeople .people:nth-of-type(2) .peoplefront {
+  transform: skew(-2deg) translateX(-10%);
+  background-image: url(https://team.daangn.com/static/533b32505144dfbfaafadb644a73ab97/a3955/64c8b357-dae1-4707-aa9b-9631e1901522_photo_06.avif);
+  box-shadow: 10px 15px 20px rgba(201, 200, 200, 0.802);
+}
+section .midcon .midpeople .people:nth-of-type(3) .peoplefront {
+  transform: skew(2deg) translateX(10%) rotateY(-180deg);
+  background-image: url(https://team.daangn.com/static/8c8134a5fbeedc6cf61b5081d82b1a4f/a3955/138723b7-53c1-4bfe-a41c-6f73c3029632_photo_15.avif);
+  background-position: center right 15%;
+  box-shadow: 10px 15px 20px rgba(201, 200, 200, 0.802);
+}
+section .midcon .midpeople .people:nth-of-type(4) {
+  flex-direction: row-reverse;
+}
+section .midcon .midpeople .people:nth-of-type(4) .peoplefront {
+  transform: skew(-2deg) translateX(-10%);
+  background-image: url(https://team.daangn.com/static/3501fb51f1fbbe8c02e9975c9090cb42/a3955/fe108dda-582b-43cc-931a-cf8c389905c8_photo_12.avif);
+  background-position: center right 15%;
+  box-shadow: 10px 15px 20px rgba(201, 200, 200, 0.802);
+}
+section .endcon {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+section .endcon .endcontext {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .endcon .endcontext h1 {
+  font: bold 3vw/1.5 "nanum gothic";
+}
+section .endcon .endcontext a {
+  margin-right: 5vw;
+  font: bold 1.5vw/1.5 "nanum gothic";
+  color: #f6a162;
+}
+section .endcon .endconpeople {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 2vw;
+}
+section .endcon .endconpeople .endconpeople1 {
+  width: 100%;
+  height: 40vw;
+  background-image: url(https://team.daangn.com/static/8dfa7827e040b4367c7e235e225bd9e0/7ec51/a15361d1-734b-47f0-bba2-9c75ad7f59e2_culture_01_16x9.avif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+section .endcon .endconpeople .endconpeople2 {
+  margin-top: 2vw;
+  width: 100%;
+  height: 40vw;
+  background-image: url(https://team.daangn.com/static/f92bf9c4d972544b77cc95ea0c85bc16/7ec51/6021b132-1752-4a55-b4ad-824c1303afa6_culture_03_16x9.avif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+section .endcon p {
+  margin-top: 2vw;
+  font: bold 1.5vw/1.5 "nanum gothic";
+}
+section .closecon {
+  margin-top: 5vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section .closecon .closeimage {
+  width: 100vw;
+  height: 50vw;
+  background-image: url(https://team.daangn.com/static/911446d21fd1fb29d6d0ee024c140f54/7ec51/2b095359-f3be-4d05-a6a1-31b2db875765_photo_03_%252816.9%2529.avif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+  section {
+    width: 100%;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  section .topcon {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  section .topcon .topcontext {
+    margin-top: 2vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section .topcon .topcontext h1 {
+    width: 100%;
+    font: bold 40px/1.5 "nanum gothic";
+  }
+  section .topcon .topcontext p {
+    margin-top: 20px;
+    width: 100%;
+    font: 15px/1.8 "nanum gothic";
+  }
+  section .topcon .topconbg {
+    width: 100%;
+    height: 40vw;
+    margin-top: 2vw;
+    background: url(/img/60f3336b-9f37-4599-84db-4d587f8a429b_culture_02_16x9.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  section .midcon {
+    width: 80%;
+    margin-top: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  section .midcon .midcontext {
+    margin-top: 2vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section .midcon .midcontext h1 {
+    width: 100%;
+    font: bold 40px/1.5 "nanum gothic";
+  }
+  section .midcon .midcontext p {
+    margin-top: 20px;
+    width: 100%;
+    font: 15px/1.8 "nanum gothic";
+  }
+  section .midcon .midpeople {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 50px;
+    padding: 0vw;
+  }
+  section .midcon .midpeople .people {
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4vw;
+  }
+  section .midcon .midpeople .people .peoplefront {
+    width: 50%;
+    height: 500px;
+    transform: skew(0deg) translateX(0%);
+    border-radius: 10%;
+    overflow: hidden;
+    background-image: url(https://team.daangn.com/static/433b212afa8b311fdea2de61bb590596/a3955/58acfc5c-9d91-4c4d-86b9-60af8c94bc16_photo_11.avif);
+    background-position: top 0 left 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: -10px 15px 20px rgba(201, 200, 200, 0.802);
+  }
+  section .midcon .midpeople .people .peopletext {
+    width: 45%;
+    text-align: center;
+  }
+  section .midcon .midpeople .people .peopletext h1 {
+    font-size: 30px;
+    font-family: "Roboto Serif";
+    margin-bottom: 3vw;
+  }
+  section .midcon .midpeople .people .peopletext p {
+    font: 15px/1.8 "nanum gothic";
+    padding: 1vw;
+  }
+  section .midcon .midpeople .people:nth-of-type(2) {
+    flex-direction: row-reverse;
+  }
+  section .midcon .midpeople .people:nth-of-type(2) .peoplefront {
+    transform: skew(0deg) translateX(0%);
+    background-image: url(https://team.daangn.com/static/533b32505144dfbfaafadb644a73ab97/a3955/64c8b357-dae1-4707-aa9b-9631e1901522_photo_06.avif);
+    box-shadow: 10px 15px 20px rgba(201, 200, 200, 0.802);
+  }
+  section .midcon .midpeople .people:nth-of-type(3) .peoplefront {
+    transform: skew(0deg) translateX(0%) rotateY(-180deg);
+    background-image: url(https://team.daangn.com/static/8c8134a5fbeedc6cf61b5081d82b1a4f/a3955/138723b7-53c1-4bfe-a41c-6f73c3029632_photo_15.avif);
+    background-position: center right 23%;
+    box-shadow: 10px 15px 20px rgba(201, 200, 200, 0.802);
+  }
+  section .midcon .midpeople .people:nth-of-type(4) {
+    flex-direction: row-reverse;
+  }
+  section .midcon .midpeople .people:nth-of-type(4) .peoplefront {
+    transform: skew(0deg) translateX(0%);
+    background-image: url(https://team.daangn.com/static/3501fb51f1fbbe8c02e9975c9090cb42/a3955/fe108dda-582b-43cc-931a-cf8c389905c8_photo_12.avif);
+    background-position: center right 23%;
+    box-shadow: 10px 15px 20px rgba(201, 200, 200, 0.802);
+  }
+  section .endcon {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  section .endcon .endcontext {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+  section .endcon .endcontext h1 {
+    font: bold 40px/1.5 "nanum gothic";
+    margin-top: 50px;
+  }
+  section .endcon .endcontext a {
+    margin: 30px 0 0 0vw;
+    font: bold 20px/1.5 "nanum gothic";
+    color: #f6a162;
+  }
+  section .endcon .endconpeople {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 50px;
+  }
+  section .endcon .endconpeople .endconpeople1 {
+    width: 100%;
+    height: 40vw;
+    background-image: url(https://team.daangn.com/static/8dfa7827e040b4367c7e235e225bd9e0/7ec51/a15361d1-734b-47f0-bba2-9c75ad7f59e2_culture_01_16x9.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  section .endcon .endconpeople .endconpeople2 {
+    margin-top: 2vw;
+    width: 100%;
+    height: 40vw;
+    background-image: url(https://team.daangn.com/static/f92bf9c4d972544b77cc95ea0c85bc16/7ec51/6021b132-1752-4a55-b4ad-824c1303afa6_culture_03_16x9.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  section .endcon p {
+    margin-top: 50px;
+    font: bold 20px/1.5 "nanum gothic";
+  }
+  section .closecon {
+    margin-top: 5vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section .closecon .closeimage {
+    width: 100%;
+    height: 500px;
+    background-image: url(https://team.daangn.com/static/911446d21fd1fb29d6d0ee024c140f54/7ec51/2b095359-f3be-4d05-a6a1-31b2db875765_photo_03_%252816.9%2529.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  section {
+    width: 100%;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  section .topcon {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  section .topcon .topcontext {
+    margin-top: 2vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  section .topcon .topcontext h1 {
+    width: 100%;
+    font: bold 28px/1.5 "nanum gothic";
+    margin-bottom: 2vw;
+  }
+  section .topcon .topcontext p {
+    width: 100%;
+    font: 15px/1.8 "nanum gothic";
+    margin-bottom: 2vw;
+  }
+  section .topcon .topconbg {
+    width: 100%;
+    height: 60vw;
+    margin-top: 2vw;
+    background: url(/img/60f3336b-9f37-4599-84db-4d587f8a429b_culture_02_16x9.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  section .midcon {
+    width: 80%;
+    margin-top: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  section .midcon .midcontext {
+    margin-top: 2vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  section .midcon .midcontext h1 {
+    width: 100%;
+    font: bold 28px/1.5 "nanum gothic";
+    margin-bottom: 2vw;
+  }
+  section .midcon .midcontext p {
+    width: 100%;
+    font: 15px/1.8 "nanum gothic";
+    margin-bottom: 2vw;
+  }
+  section .midcon .midpeople {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 2vw;
+    padding: 0vw;
+  }
+  section .midcon .midpeople .people {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4vw;
+  }
+  section .midcon .midpeople .people .peoplefront {
+    width: 100%;
+    height: 50vw;
+    transform: skew(0deg) translateX(0%);
+    border-radius: 10%;
+    overflow: hidden;
+    background-image: url(https://team.daangn.com/static/433b212afa8b311fdea2de61bb590596/a3955/58acfc5c-9d91-4c4d-86b9-60af8c94bc16_photo_11.avif);
+    background-position: top 0 left 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: -10px 15px 20px rgba(201, 200, 200, 0);
+  }
+  section .midcon .midpeople .people .peopletext {
+    margin-top: 4vw;
+    width: 100%;
+    text-align: left;
+  }
+  section .midcon .midpeople .people .peopletext h1 {
+    font-size: 20px;
+    padding: 1vw;
+    font-family: "Roboto Serif";
+  }
+  section .midcon .midpeople .people .peopletext p {
+    font: 15px/1.8 "nanum gothic";
+    padding: 1vw;
+  }
+  section .midcon .midpeople .people:nth-of-type(2) {
+    flex-direction: column;
+  }
+  section .midcon .midpeople .people:nth-of-type(2) .peoplefront {
+    transform: skew(0deg) translateX(0%);
+    background-image: url(https://team.daangn.com/static/533b32505144dfbfaafadb644a73ab97/a3955/64c8b357-dae1-4707-aa9b-9631e1901522_photo_06.avif);
+    box-shadow: 10px 15px 20px rgba(201, 200, 200, 0);
+  }
+  section .midcon .midpeople .people:nth-of-type(3) .peoplefront {
+    transform: skew(0deg) translateX(0%) rotateY(-180deg);
+    background-image: url(https://team.daangn.com/static/8c8134a5fbeedc6cf61b5081d82b1a4f/a3955/138723b7-53c1-4bfe-a41c-6f73c3029632_photo_15.avif);
+    background-position: center right 15%;
+    box-shadow: 10px 15px 20px rgba(201, 200, 200, 0);
+  }
+  section .midcon .midpeople .people:nth-of-type(4) {
+    flex-direction: column;
+  }
+  section .midcon .midpeople .people:nth-of-type(4) .peoplefront {
+    transform: skew(0deg) translateX(0%);
+    background-image: url(https://team.daangn.com/static/3501fb51f1fbbe8c02e9975c9090cb42/a3955/fe108dda-582b-43cc-931a-cf8c389905c8_photo_12.avif);
+    background-position: center right 15%;
+    box-shadow: 10px 15px 20px rgba(201, 200, 200, 0);
+  }
+  section .endcon {
+    margin-top: 50px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  section .endcon .endcontext {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    text-align: center;
+  }
+  section .endcon .endcontext h1 {
+    width: 100%;
+    font: bold 20px/1.5 "nanum gothic";
+  }
+  section .endcon .endcontext a {
+    width: 100%;
+    margin-top: 5vw;
+    margin-right: 0vw;
+    font: bold 15px/1.5 "nanum gothic";
+    color: #f6a162;
+  }
+  section .endcon .endconpeople {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 30px;
+  }
+  section .endcon .endconpeople .endconpeople1 {
+    width: 100%;
+    height: 70vw;
+    background-image: url(https://team.daangn.com/static/e2eaa825815ae36aedef7b2c4e2b8967/f851b/011d3db9-2953-4a0b-9c28-fd9bcff1bd4d_culture_key_mobile_01%25283x4%2529.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  section .endcon .endconpeople .endconpeople2 {
+    margin-top: 2vw;
+    width: 100%;
+    height: 70vw;
+    background-image: url(https://team.daangn.com/static/d6b49d0aa6d1c93a0ff7ab59a8d2d1e5/92ec5/b20c40a7-32fe-410f-86e3-99cf59563cd3_culture_03_3x4_alt.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  section .endcon p {
+    margin-top: 2vw;
+    font: 15px/1.8 "nanum gothic";
+  }
+  section .closecon {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section .closecon .closeimage {
+    width: 100%;
+    height: 400px;
+    background-image: url(https://team.daangn.com/static/911446d21fd1fb29d6d0ee024c140f54/7ec51/2b095359-f3be-4d05-a6a1-31b2db875765_photo_03_%252816.9%2529.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+/*# sourceMappingURL=sub3.css.map */
